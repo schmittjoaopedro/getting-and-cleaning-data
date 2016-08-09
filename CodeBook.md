@@ -87,7 +87,7 @@ This code book contains the variable names, unit and a description of the file: 
 * `fBodyAccMagStd` - Frequency signal body accelaration magnitude standard deviation (real number)
 * `fBodyAccMagMeanFreq` - Frequency signal body accelaration magnitude mean frequency (real number)
 * `fBodyBodyAccJerkMagMean` - Frequency signal body accelaration Jerk magnitude mean (real number)
-* `fBodyBodyAccJerkMagStd` - Frequency signal body accelaration Jerk magnitude standard deviation frequency (real number)
+* `fBodyBodyAccJerkMagStd` - Frequency signal body accelaration Jerk magnitude standard deviation (real number)
 * `fBodyBodyAccJerkMagMeanFreq` - Frequency signal body accelaration Jerk magnitude mean frequency (real number)
 * `fBodyBodyGyroMagMean` - Frequency signal body gyroscope magnitude mean (real number)
 * `fBodyBodyGyroMagStd` - Frequency signal body gyroscope magnitude standard deviation (real number)
