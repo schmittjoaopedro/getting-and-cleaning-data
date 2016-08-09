@@ -16,6 +16,7 @@ This file describe the steps to tidy the data collected of the movements of sens
     ```R
     source("run_analysis.R")
     ```
+
 Note: If the download is slow, you can copy the file of this dataset and paste in the same directory of the "run_analysis.R" with the name data.zip.
 
 # What the script *run_analysis.R" makes
