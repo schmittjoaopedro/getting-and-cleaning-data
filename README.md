@@ -19,15 +19,17 @@ This file describe the steps to tidy the data collected of the movements of sens
 
 Note: If the download is slow, you can copy the file of this dataset and paste in the same directory of the "run_analysis.R" with the name data.zip.
 
-# What the script *run_analysis.R" makes
+## What the script *run_analysis.R" makes
 
-1. Download the dataset of the site.
+1. Download the dataset of the site and unzip it.
 2. Loads the features.txt and normalize their values
-3. Filter only mean and std values of the features.txt
-4. Loads the values of the mean and std of the training and test of the datasets X
-5. Merges the training and test datasets of X with the datasets of Y and customers
-6. Replace the activity Id by the activity label
-7. Calculates the mean of the values of each column for each group
-8. Writes the calculated dataset in a file called tidy_data.txt
+3. Loads the activity_labels.txt
+4. Filter only mean and std values of the features.txt
+5. Loads the values of the mean and std of the training and test of the datasets X
+6. Merges the X with the Y and customers for the training and test datasets
+8. Merge the training dataset with test dataset
+9. Replace the activity Id by the activity label
+10. Calculates the mean of the values of each column for each group
+11. Writes the calculated dataset in a file called tidy_data.txt
 
 Author: João Pedro Schmitt
