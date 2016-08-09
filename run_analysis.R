@@ -2,7 +2,7 @@
 # Author: João Pedro Schmitt
 #
 # Script used to load raw data from measurements of smartphones and 
-# tidy the data and calculate the mean and std for each group formed by
+# tidy the data to calculate the mean and std for each group formed by
 # acvitity and customers
 #
 # Available at: https://github.com/schmittjoaopedro/getting-and-cleaning-data
@@ -46,7 +46,7 @@ featuresToSelect <- grepl(".mean.|.std.", features$featureCode) # Extract only t
 features <- features[featuresToSelect,2] # Select the labels
 features <- gsub("[()]|-","",gsub("mean","Mean",gsub("std", "Std", features))) # Standardize the names
 
-# Load and merge the test and train datasets. Select only the mean and std columns for the dataset of the values,
+# Load and merge the test and train datasets. Select only the mean and std columns of the X dataset,
 # and bind columns of activity, subjects and values
 # Do only for test
 testY <- read.table(file.path(dataPath, "test", "y_test.txt")) # Load activity
