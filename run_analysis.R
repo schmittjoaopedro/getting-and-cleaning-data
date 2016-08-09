@@ -80,7 +80,7 @@ dataset.raw <- dataset.raw %>% select(-(activityId))
 dataset.tidy <- melt(dataset.raw, id = c("activityName","featureCode"))
 
 # Apply group by activityName and featureCode by mean of each group
-dataset.tidy <- dcast(dataset.tidy, activityName + featureCode ~ variable, mean)
+dataset.tidy <- dcast(dataset.tidy, featureCode + activityName ~ variable, mean)
 
 # Create a file with the tidy data
 write.table(dataset.tidy, "tidy_data.txt", row.names = F)
