@@ -7,7 +7,7 @@ This program has the purpose to obtain the grade to the coursera "Getting and Cl
 
 This file describe the steps to tidy the data collected of the movements of sensors from Smartphones.
 
-1. Have installed properly the software R and the dplyr library.
+1. Have installed properly the software R and the dplyr and reshape2 libraries.
 2. Clone the [GitHub repository](https://github.com/schmittjoaopedro/getting-and-cleaning-data) on your computer
 3. Start the R software, copy the path of the directory where this github repository was cloned
 3. Using setwd() command, define the directory copied in step 2.

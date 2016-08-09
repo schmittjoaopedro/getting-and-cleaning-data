@@ -11,6 +11,7 @@
 
 # Import the required libraries
 library(dplyr)
+library(reshape2)
 
 
 
@@ -67,17 +68,19 @@ names(dataset.raw) <- c("activityId","featureCode", features)
 # Add activity label instead use the id of activity, by merging
 dataset.raw <- merge(activitylabels, dataset.raw, by = "activityId")
 
-
+# Exclude the activityId column
+dataset.raw <- dataset.raw %>% select(-(activityId))
+    
+    
 
 
 # STEP 3 - PROCESS THE TIDY DATASET PRODUCED BY STEP 2
 # ==========================================================================================================================
-# Exclude the activityId column, group all data by activityName and featureCode and calulate the mean 
-# for the values of each group
-dataset.tidy <- dataset.raw %>% 
-    select(-(activityId)) %>% 
-    group_by(activityName, featureCode) %>% 
-    summarise_each(funs(mean))
+# Melt the dataframe
+dataset.tidy <- melt(dataset.raw, id = c("activityName","featureCode"))
+
+# Apply group by activityName and featureCode by mean of each group
+dataset.tidy <- dcast(dataset.tidy, activityName + featureCode ~ variable, mean)
 
 # Create a file with the tidy data
 write.table(dataset.tidy, "tidy_data.txt", row.names = F)
